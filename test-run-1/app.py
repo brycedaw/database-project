@@ -16,4 +16,5 @@ def about():
 if __name__ == '__main__':
     # Used when running locally only. When deploying to Google App
     # Engine, a webserver process such as Gunicorn will serve the app. 
-    app.run(debug=True)
+    #app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
