@@ -1,0 +1,23 @@
+#app.yaml
+runtime: python312
+env: standard
+instance_class: B2 
+
+# Run gunicorn on app object in app.py
+entrypoint: gunicorn -b :$PORT app:app
+
+# Spin up 2 instances
+manual_scaling:
+  instances: 2
+
+# Specify machine type
+resources:
+  cpu: 1
+  memory_gb: 0.5
+  disk_size_gb: 10
+
+env_variables:
+  CLOUD_SQL_USERNAME: database-hood-user 
+  CLOUD_SQL_PASSWORD: password
+  CLOUD_SQL_DATABASE_NAME: database-hood-db
+  CLOUD_SQL_CONNECTION_NAME: hood-418202:us-central1:database-hood

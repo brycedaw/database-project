@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h2>Add a Song</h2>
+    <form action="/add" method="POST">
+        <div><label>Title</label>: <input type=text name=title value="Type here"></div>
+        <div><label>Artist</label>: <input type=text name=artist  value="Type here"></div>
+        <div><label>Genre</label>: <input type=text name=genre  value="Type here"></div>
+	    <div><button type="submit">Submit</button></div>
+    </form>
+{% endblock %}
