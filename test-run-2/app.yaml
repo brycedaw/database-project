@@ -17,7 +17,7 @@ resources:
   disk_size_gb: 10
 
 env_variables:
-  CLOUD_SQL_USERNAME: database-hood-user 
-  CLOUD_SQL_PASSWORD: password
-  CLOUD_SQL_DATABASE_NAME: database-hood-db
-  CLOUD_SQL_CONNECTION_NAME: hood-418202:us-central1:database-hood
+  CLOUD_SQL_USERNAME:  
+  CLOUD_SQL_PASSWORD: 
+  CLOUD_SQL_DATABASE_NAME: 
+  CLOUD_SQL_CONNECTION_NAME: 
