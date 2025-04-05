@@ -30,6 +30,14 @@ def get_songs():
         songs = cursor.fetchall()
         return songs    
 
+def get_songs_by_title(title):
+    conn = open_connection()
+    with conn.cursor() as cursor:
+        cursor.execute("SELECT * FROM songs WHERE title LIKE %s", ['%' + title + '%'])
+        songs = cursor.fetchall()  
+        return songs  
+
+
 def create(songtitle, songartist, songgenre):
     conn = open_connection()
     with conn.cursor() as cursor:

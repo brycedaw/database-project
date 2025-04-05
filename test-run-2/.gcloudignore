@@ -17,4 +17,12 @@
 __pycache__/
 # Ignored by the build system
 /setup.cfg
+
+# Virtual environment (VERY important to exclude)
+venv/
 env/
+ENV/
+*.pyc
+*.pyo
+*.pyd
+*.db
