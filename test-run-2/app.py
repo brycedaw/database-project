@@ -1,5 +1,5 @@
 from flask import Flask, redirect, request, url_for, render_template
-from db import get_songs, create, get_songs_by_title
+from db import get_customers_perryridge, get_songs, create, get_songs_by_title
 
 app = Flask(__name__)
 
@@ -10,6 +10,10 @@ app = Flask(__name__)
 def static_pages():
     page = request.path.strip('/')
     return render_template(f"{page or 'index'}.html")
+
+@app.route('/customer_perryridge')
+def customer_perryridge():
+    return render_template('customer_perryridge.html', customers=get_customers_perryridge())
 
 @app.route('/display')
 def display():

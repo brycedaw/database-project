@@ -30,6 +30,15 @@ def get_songs():
         songs = cursor.fetchall()
         return songs    
 
+def get_customers_perryridge():
+    conn = open_connection()
+    with conn.cursor() as cursor:
+        cursor.execute("SELECT c.customer_name, c.customer_city from customer c, borrower b, loan l where c.customer_name = b.customer_name and b.loan_number = l.loan_number and l.branch_name = 'Perryridge';")
+        customers = cursor.fetchall()
+        return customers
+
+
+
 def get_songs_by_title(title):
     conn = open_connection()
     with conn.cursor() as cursor:
@@ -45,3 +54,4 @@ def create(songtitle, songartist, songgenre):
                        (songtitle, songartist, songgenre))
     conn.commit()
     conn.close()
+

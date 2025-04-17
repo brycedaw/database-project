@@ -17,7 +17,7 @@ resources:
   disk_size_gb: 10
 
 env_variables:
-  CLOUD_SQL_USERNAME:  
-  CLOUD_SQL_PASSWORD: 
-  CLOUD_SQL_DATABASE_NAME: 
-  CLOUD_SQL_CONNECTION_NAME: 
+  CLOUD_SQL_USERNAME: bjd4
+  CLOUD_SQL_PASSWORD: password
+  CLOUD_SQL_DATABASE_NAME: hood-daw-db
+  CLOUD_SQL_CONNECTION_NAME: project-1-455718:us-east1:hood-daw-instance
